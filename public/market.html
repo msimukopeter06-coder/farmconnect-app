@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Village Market – FarmConnect Zambia</title>
+<meta name="description" content="Post and find crops, vegetables, livestock, eggs and honey from Zambian farmers.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+<section class="phero">
+<img src="images/market-stall.jpg" style="--pos:center 55%" width="1200" height="800" alt="A village market stall with tomatoes, rape greens and cabbages, each with a price sign" fetchpriority="high">
+<div class="txt"><h1 data-i18n="h_m">🛒 Village Market</h1><p>Free for farmers. Post what you grow and be found by buyers.</p></div>
+</section>
+<div class="ticker" aria-hidden="true"><div><span>🌽</span><span>🍅</span><span>🥬</span><span>🥕</span><span>🐄</span><span>🐔</span><span>🥚</span><span>🍯</span><span>🥭</span><span>🍌</span><span>🧅</span><span>🥜</span><span>🌽</span><span>🍅</span><span>🥬</span><span>🥕</span><span>🐄</span><span>🐔</span><span>🥚</span><span>🍯</span><span>🥭</span><span>🍌</span><span>🧅</span><span>🥜</span></div></div>
+<div class="card">
+<form id="lform">
+<input name="title" placeholder="Product (e.g. Maize, 50kg bags)" required maxlength="80">
+<select name="cat"><option>Crops</option><option>Vegetables</option><option>Fruit</option><option>Livestock</option><option>Eggs &amp; Dairy</option><option>Honey &amp; Other</option></select>
+<input name="price" placeholder="Price (e.g. K250 per bag)" required maxlength="40">
+<input name="qty" placeholder="Quantity available" maxlength="40">
+<input name="village" placeholder="Village / area" required maxlength="60">
+<input name="name" placeholder="Your name" required maxlength="50">
+<input name="phone" placeholder="Phone / WhatsApp (+260...)" required inputmode="tel" maxlength="20">
+<input type="file" name="photo" accept="image/*" aria-label="Product photo">
+<textarea class="full" name="desc" rows="2" placeholder="Short description (quality, harvest date, delivery)" maxlength="300"></textarea>
+<button class="pri full" type="submit" data-i18n="post">Post my product</button>
+</form>
+<p class="note dbnote"></p>
+</div>
+<div class="tabs" id="filters" style="margin-top:12px"></div>
+<input id="q" placeholder="Search products or villages…" style="margin-bottom:12px">
+<div class="grid" id="listings"></div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/market.js"></script>
+</body>
+</html>

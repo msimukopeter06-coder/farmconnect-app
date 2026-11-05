@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Weather, Rain &amp; Disease Alerts – FarmConnect Zambia</title>
+<meta name="description" content="Season advice, farmer rain reports and crop and animal disease alerts near you in Zambia.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+<section class="phero">
+<img src="images/rain.jpg" style="--pos:center 30%" width="1200" height="800" alt="Heavy rain clouds over green farm fields and a village" fetchpriority="high">
+<div class="rain" id="rain" aria-hidden="true"></div><div class="txt"><h1 data-i18n="h_w">📍 Weather, Rain &amp; Disease Alerts Near You</h1><p>Know your season, report rain, and warn your neighbours.</p></div>
+</section>
+<div class="card">
+<div class="tabs wrap"><button class="pri" id="gps" data-i18n="gps">Use my GPS</button>
+<select id="town" style="width:auto;flex:1;min-width:160px"><option value="">…or pick nearest town</option></select></div>
+<div id="loc" class="note">Location not set. Allow GPS or choose a town to see your local season and nearby alerts.</div>
+<div class="stat" id="season"></div>
+<p class="note">Rain onset is a seasonal estimate for your latitude, not a live forecast. This site cannot fetch live weather, so check the Zambia Meteorological Department forecasts on radio, SMS or their website. Farmers' reports below are live.</p>
+<p class="note dbnote"></p>
+</div>
+
+<h3 style="margin-top:18px">🌧 Rain watch (reported by farmers)</h3>
+<div class="card">
+<form id="rform"><input name="note" placeholder="Optional note (e.g. heavy rain, 20 mins)" maxlength="80"><button class="pri" type="submit" data-i18n="rain">Rain has started here</button></form>
+<div id="rains" class="note" style="margin-top:8px"></div>
+</div>
+
+<h3 style="margin-top:18px" id="report">🦠 Disease &amp; pest alerts</h3>
+<div class="card">
+<p class="note" style="margin-top:0">Seen a disease or pest? Report it so neighbours can protect their crops and animals. Alerts use your GPS or chosen town. Not sure what it is? Try the <a href="help.html#solver">problem solver</a>.</p>
+<form id="aform">
+<select name="kind" id="akind"><option value="crop">Crop</option><option value="animal">Animal</option></select>
+<select name="dis" id="adis"></select>
+<select name="sev"><option>Low</option><option>Medium</option><option>High</option></select>
+<input name="name" placeholder="Your name" required maxlength="50">
+<input name="phone" placeholder="Phone (optional)" inputmode="tel" maxlength="20">
+<input type="file" name="photo" accept="image/*" class="full" aria-label="Photo of the problem">
+<textarea class="full" name="note" rows="2" placeholder="What did you see? How many affected?" maxlength="250"></textarea>
+<button class="pri full" type="submit" data-i18n="out">Report outbreak</button>
+</form>
+</div>
+<div id="alerts" class="grid" style="margin-top:12px"></div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/weather.js"></script>
+</body>
+</html>

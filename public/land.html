@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Farms &amp; Land for Sale – FarmConnect Zambia</title>
+<meta name="description" content="Farms, plots and ranches for sale in Zambia, for local and international buyers.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+<section class="phero">
+<img src="images/land.jpg" style="--pos:center 78%" width="1200" height="800" alt="Farmland for sale: a roadside sign beside young maize and grassland with a village behind" fetchpriority="high">
+<div class="txt"><h1 data-i18n="h_l">🏞 Farms &amp; Land for Sale</h1><p>List or find farms, plots and ranches for local and international buyers.</p></div>
+</section>
+<div class="alert"><span class="sign" aria-hidden="true"><svg width="34" height="40" viewBox="0 0 34 40"><rect x="15" y="0" width="4" height="8" fill="#3b2a1a"/><rect x="2" y="8" width="30" height="22" rx="3" fill="#f6ece1" stroke="#7b4a22" stroke-width="2"/><text x="17" y="23" font-size="8" font-weight="700" text-anchor="middle" fill="#7b4a22" font-family="sans-serif">SALE</text></svg></span> <b>Buying from abroad?</b> Rules on land ownership by non-citizens apply in Zambia. Before paying anything: check the title at the Ministry of Lands, use a registered lawyer, visit the plot or send a trusted agent, and pay only through traceable channels. This site only connects people and is not legal advice.</div>
+<div class="card" style="margin-top:12px">
+<form id="dform">
+<input name="title" placeholder="Title (e.g. 20 ha maize farm near river)" required maxlength="90">
+<select name="type"><option>Farmland</option><option>Farm with house</option><option>Residential plot</option><option>Ranch / grazing</option><option>Lease</option></select>
+<input name="size" placeholder="Size (e.g. 20 hectares)" required maxlength="30">
+<input name="price" placeholder="Price (number)" required inputmode="decimal" maxlength="15">
+<select name="cur"><option>ZMW</option><option>USD</option><option>GBP</option><option>EUR</option></select>
+<select name="tenure"><option>Title deed</option><option>Leasehold</option><option>Customary (chief's letter)</option><option>Not sure</option></select>
+<input name="place" placeholder="District, Province" required maxlength="70">
+<select name="foreign"><option value="yes">Open to foreign buyers</option><option value="no">Zambians only</option></select>
+<input name="name" placeholder="Seller / agent name" required maxlength="50">
+<input name="phone" placeholder="Phone / WhatsApp with country code" required inputmode="tel" maxlength="20">
+<input type="file" name="photo" accept="image/*" aria-label="Land photo">
+<label class="chk"><input type="checkbox" name="pin"> Pin my current GPS location</label>
+<textarea class="full" name="desc" rows="2" placeholder="Water, soil, road access, buildings, power…" maxlength="300"></textarea>
+<button class="pri full" type="submit" data-i18n="list">List land</button>
+</form>
+<p class="note dbnote"></p>
+</div>
+<div class="tabs" id="lfilters" style="margin-top:12px"></div>
+<div class="grid" id="lands"></div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/land.js"></script>
+</body>
+</html>

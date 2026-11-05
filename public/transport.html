@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Transport &amp; Logistics Board – FarmConnect Zambia</title>
+<meta name="description" content="Offer or find transport for farm produce in Zambia.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+<section class="phero">
+<img src="images/truck.jpg" style="--pos:center 60%" width="1200" height="800" alt="A blue pickup loaded with 50kg bags of maize on a dirt road in the countryside" fetchpriority="high">
+<div class="txt"><h1 data-i18n="h_t">🚚 Transport &amp; Logistics Board</h1><p>Share a truck to town, or find a lift for your goods.</p></div>
+</section>
+<div class="road" aria-hidden="true"><svg class="truck " viewBox="25 40 220 100" aria-hidden="true"><rect x="40" y="62" width="130" height="56" rx="4" fill="#7b4a22"/><rect x="172" y="80" width="62" height="38" rx="5" fill="#2e7d32"/><path d="M180 82h30l16 20h-46z" fill="#d6ecf7"/><ellipse cx="70" cy="58" rx="20" ry="12" fill="#e9d9a8"/><ellipse cx="110" cy="56" rx="20" ry="12" fill="#e9d9a8"/><ellipse cx="148" cy="58" rx="18" ry="11" fill="#e9d9a8"/><rect x="30" y="116" width="210" height="6" fill="#3b2a1a"/><g class="wheel"><circle cx="70" cy="126" r="13" fill="#3b2a1a"/><circle cx="70" cy="126" r="5" fill="#d9c9b0"/><rect x="69" y="114" width="2" height="12" fill="#d9c9b0"/></g><g class="wheel"><circle cx="130" cy="126" r="13" fill="#3b2a1a"/><circle cx="130" cy="126" r="5" fill="#d9c9b0"/><rect x="129" y="114" width="2" height="12" fill="#d9c9b0"/></g><g class="wheel"><circle cx="205" cy="126" r="13" fill="#3b2a1a"/><circle cx="205" cy="126" r="5" fill="#d9c9b0"/><rect x="204" y="114" width="2" height="12" fill="#d9c9b0"/></g></svg><svg class="truck t2" viewBox="25 40 220 100" aria-hidden="true"><rect x="40" y="62" width="130" height="56" rx="4" fill="#7b4a22"/><rect x="172" y="80" width="62" height="38" rx="5" fill="#2e7d32"/><path d="M180 82h30l16 20h-46z" fill="#d6ecf7"/><ellipse cx="70" cy="58" rx="20" ry="12" fill="#e9d9a8"/><ellipse cx="110" cy="56" rx="20" ry="12" fill="#e9d9a8"/><ellipse cx="148" cy="58" rx="18" ry="11" fill="#e9d9a8"/><rect x="30" y="116" width="210" height="6" fill="#3b2a1a"/><g class="wheel"><circle cx="70" cy="126" r="13" fill="#3b2a1a"/><circle cx="70" cy="126" r="5" fill="#d9c9b0"/><rect x="69" y="114" width="2" height="12" fill="#d9c9b0"/></g><g class="wheel"><circle cx="130" cy="126" r="13" fill="#3b2a1a"/><circle cx="130" cy="126" r="5" fill="#d9c9b0"/><rect x="129" y="114" width="2" height="12" fill="#d9c9b0"/></g><g class="wheel"><circle cx="205" cy="126" r="13" fill="#3b2a1a"/><circle cx="205" cy="126" r="5" fill="#d9c9b0"/><rect x="204" y="114" width="2" height="12" fill="#d9c9b0"/></g></svg></div>
+<div class="card">
+<form id="tform">
+<select name="kind"><option value="offer">I have a vehicle going to town</option><option value="need">I need transport for goods</option></select>
+<select name="veh"><option value="truck">Truck / lorry</option><option value="car">Car / pickup</option></select>
+<input type="file" name="photo" accept="image/*" aria-label="Vehicle photo">
+<input name="route" placeholder="Route (e.g. Village → Lusaka)" required maxlength="80">
+<input name="when" placeholder="Day / date" required maxlength="40">
+<input name="name" placeholder="Your name" required maxlength="50">
+<input name="phone" placeholder="Phone / WhatsApp" required inputmode="tel" maxlength="20">
+<input name="info" placeholder="Capacity / load / cost share" maxlength="100">
+<button class="pri full" type="submit" data-i18n="board">Post to board</button>
+</form>
+<p class="note dbnote"></p>
+</div>
+<div class="grid" id="trips" style="margin-top:12px"></div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/transport.js"></script>
+</body>
+</html>
