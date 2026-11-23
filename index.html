@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -763,8 +762,8 @@ $("#tabReg").onclick=()=>showTab("reg");$("#tabLog").onclick=()=>showTab("log");
 document.addEventListener("fcview",e=>{if(e.fcHash==="login")showTab("log");else if(e.fcHash==="account"||e.fcHash==="signup"){showTab("reg");if(USER)loadMine()}});
 async function sendAuth(e,path,body,busy){e.preventDefault();const f=e.target,m=$("#acctMsg"),btn=f.querySelector("button[type=submit]");
  btn.disabled=true;m.textContent=busy;
- try{const r=await jpost(path,body);if(r.ok){f.reset();m.textContent="";setUser(r.j.user);window.scrollTo(0,0)}else m.textContent=r.j.error||"Something went wrong. Please try again."}
- catch(err){m.textContent="No connection. Please try again."}
+ try{const r=await jpost(path,body);if(r.ok){f.reset();m.textContent="";setUser(r.j.user);window.scrollTo(0,0)}else m.textContent=r.j.error?(r.status>=500?r.j.error+" (error "+r.status+")":r.j.error):((r.status===404||r.status===405)?"This link is not running the FarmConnect server, so accounts cannot work here (error "+r.status+"). The site owner must deploy it as a Render Web Service.":"The account service did not answer (error "+r.status+"). The server may be asleep. Wait a minute and try again.")}
+ catch(err){m.textContent="No connection. Please check your internet and try again."}
  btn.disabled=false}
 $("#regform").addEventListener("submit",e=>{const f=e.target;
  if(f.elements["password"].value!==f.elements["password2"].value){e.preventDefault();$("#acctMsg").textContent="The two passwords are not the same.";return}
